@@ -47,8 +47,19 @@ const displayNews = allNews =>{
     // console.log(allNews);
     const newsContainer = document.getElementById("news-container");
     newsContainer.innerHTML="";
-   
     allNews.forEach(news => {
+
+
+        const totalNewsCount = document.getElementById('total-news-count');
+        totalNewsCount.textContent="";
+    if(allNews.length === 0){
+        totalNewsCount.innerText = 'No';
+    }
+    else{
+        totalNewsCount.innerText = allNews.length;
+    }
+
+
         const{rating, total_view, title, author, thumbnail_url, image_url, details, _id }=news
         const div = document.createElement("div");
         div.innerHTML = ` <div class=" px-40 py-5 card card-side bg-base-100 shadow-xl">
