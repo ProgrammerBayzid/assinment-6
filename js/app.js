@@ -17,8 +17,6 @@ const loadCatagorey=async()=>{
 const setAllCategory = async ()=>{
     const data = await loadCatagorey();
 
-    toggleSpiner( true);
-
     const category = document.getElementById("categorey");
    
     for (const catagory of data){
@@ -36,6 +34,7 @@ setAllCategory();
 
 const newsDetails = async(category_id)=>{
     const url =(` https://openapi.programming-hero.com/api/news/category/0${category_id}`);
+    toggleSpiner( true);
     const res = await fetch(url);
     const data = await res.json();
     displayNews(data.data);

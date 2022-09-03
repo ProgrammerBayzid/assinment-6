@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BD Taza news</title>
      <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
      <script src="https://cdn.tailwindcss.com"></script>
 
@@ -15,11 +15,27 @@
 
      <script src="https://kit.fontawesome.com/eb7ab771c6.js" crossorigin="anonymous"></script>
 
+
+     <style>
+      .loading {
+    position: fixed;
+    z-index: 999;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+}
+     </style>
+
 </head>
 <header>
     <div class="navbar bg-base-100">
         <div class="flex-1">
-          <a class="btn btn-ghost normal-case text-xl">BD News</a>
+          <a class="btn btn-ghost normal-case text-xl">BD Taza News</a>
         </div>
         <div class="flex-none gap-5">
             <a href="">Home</a>
@@ -63,17 +79,12 @@
     </section>
     <main>
 <section class="p-20">
-    <div tabindex="0" class="  border border-base-300 bg-base-100 rounded-box">
-        <div id="lenght" class=" p-10 collapse-title text-xl font-medium">
-           
-        </div>
-        
-      </div>
+    
 </section>
 
 <!-- spinner -->
 
-<section id="loader" class="invisible"> 
+<section id="loader" class="invisible loading" > 
   
 <div role="status">
   <svg aria-hidden="true" class="mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
