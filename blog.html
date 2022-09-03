@@ -1,37 +1,79 @@
-const cardContainer = () =>{
-    const card = document.getElementById('card-div');
-    const div = document.createElement('div');
-    // div.classList.add('col-12');
-    div.innerHTML = `
-    
-   <a href="#" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-   <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/docs/images/blog/image-4.jpg" alt="">
-   <div class="flex flex-col justify-between p-4 leading-normal">
-       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-   </div>
-   </a>
-   
-    `
-   
-    card.appendChild(div);
-   }
-   cardContainer();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer of qua</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
 
-  <div>
+    <script src="https://kit.fontawesome.com/eb7ab771c6.js" crossorigin="anonymous"></script>
 
-    <div class="w-10 flex gap-5 my-20"> 
-        <img src="${author.img}" alt="Movie">
-        <h1>${author.name}</h1>
+</head>
+<body>
+    <section class="container">
+        <div class="row p-5">
+           <div class="col-lg-12 text-center col-md-12 col-sm-12 ">
+            <h1>Frequently Asked Questions</h1>
+           </div>
+           <div class="col-lg-12 text-center col-md-12 col-sm-12">
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+           </div>
         </div>
-        
-    <div>
-        <FontAwesomeIcon icon="fa-solid fa-eye" />
-        <h1>${total_view}</h1>
-       </div>
-    
-       <div>
-        <FontAwesomeIcon icon="fa-solid fa-arrow-right" />
-       </div>
-  </div>
+        <div class="accordion p-5" id="accordionPanelsStayOpenExample ">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                    what is the difference between flex and grid
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne" style="">
+                <div class="accordion-body">
+                  <strong> The difference of between flex and grid</strong> Grid and flexbox. The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                Explain the css grid vs flexbox vs bootstrap
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+                  <strong>Explain css grid vs flexbox vs bootstrap</strong> The key difference is that CSS Grid can be used to create two-dimensional layouts, while Flexbox can only be used to create one-dimensional layouts. That means you can place components along the X- and Y-axis in CSS Grid and only one axis in Flexbox.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                 What is css grid layout?
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                <div class="accordion-body">
+                  <strong>css grid layout examples</strong>CSS Grid Level 2 Examples · Subgrid on columns and rows · Subgrid on columns, implicit grid rows · Subgrid on rows, defined column tracks · The subgrid can override ...
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingfour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsefour" aria-expanded="false" aria-controls="panelsStayOpen-collapsefour">
+                    Is Tailwind same as Bootstrap?
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapsefour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingfour">
+                  <div class="accordion-body">
+                    <strong>Explain Tailwind vs Bootstrap</strong> Tailwind offers predesigned widgets to build a site from scratch with fast UI development. Bootstrap comes with a set of pre-styled responsive, mobile-first components that possess a definite UI kit. Tailwind CSS uses a set of utility classes to create a neat UI with more flexibility and uniqueness.
+                  </div>
+                </div>
+              </div>
+          </div>
+        </section>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

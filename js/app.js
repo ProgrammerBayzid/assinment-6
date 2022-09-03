@@ -16,7 +16,11 @@ const loadCatagorey=async()=>{
 
 const setAllCategory = async ()=>{
     const data = await loadCatagorey();
+
+    toggleSpiner( true);
+
     const category = document.getElementById("categorey");
+   
     for (const catagory of data){
       
                    
@@ -38,6 +42,8 @@ const newsDetails = async(category_id)=>{
 }
 
 
+
+
 const displayNews = allNews =>{
     // console.log(allNews);
     const newsContainer = document.getElementById("news-container");
@@ -45,11 +51,6 @@ const displayNews = allNews =>{
    
     allNews.forEach(news => {
         const{rating, total_view, title, author, thumbnail_url, image_url, details, _id }=news
-        
-        const lenght =document.getElementById("lenght");
-        lenght.innerHTML=`<h1>${news.length}</h1>`;
-
-        
         const div = document.createElement("div");
         div.innerHTML = ` <div class=" px-40 py-5 card card-side bg-base-100 shadow-xl">
         <figure><img class="w-80 h-80" src="${thumbnail_url}" alt="Movie"></figure>
@@ -61,12 +62,12 @@ const displayNews = allNews =>{
 
     <div class=" flex gap-5 my-"> 
         <img class="w-10 h-10 rounded-full" src="${author.img}" alt="Movie">
-        <h1>${author.name}</h1>
+        <h1>${author.name ? author.name : "No Data Found"}</h1>
         </div>
         
     <div class="flex gap-3">
     <i class="fa-solid fa-eye"></i>
-        <h1>${total_view}</h1>
+        <h1>${total_view? total_view : "No Data Found"}</h1>
        </div>
     
        <div>
@@ -81,10 +82,14 @@ const displayNews = allNews =>{
       `;
 
       newsContainer.appendChild(div);
-
-        
     });
+
+    toggleSpiner( false);
 }
+
+
+
+
 
 
  const loadModal =async (id )=>{
@@ -118,5 +123,18 @@ const displayNews = allNews =>{
 
 
  }
+
+
+ const toggleSpiner = isLoading =>{
+    const loaderSection = document.getElementById("loader");
+    if(isLoading){
+        loaderSection.classList.remove('invisible')
+    }
+    else{
+        loaderSection.classList.add('invisible')
+
+    }
+}
+
 
 
