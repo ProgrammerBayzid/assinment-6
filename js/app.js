@@ -99,6 +99,24 @@ const displayNews = allNews =>{
     }
  }
 
+ const displayNewsDetails = singalNews =>{
+     console.log(singalNews);
+     const{rating, title, image_url, details,}= singalNews;
 
+     const divcon = document.getElementById("modal-body")
+     divcon.innerHTML=`
+     <h3 class="font-bold text-lg">${title}</h3>
+        <p class="py-4">${details}</p>
+        <p class="py-4"><i class="fa-solid fa-star-half-stroke"></i> ${rating.number}</p>
+        
+        <div><img class=" h-50" src="${image_url}"></div>
+        <div class="modal-action">
+        <label for="my-modal-6" class="btn">Close</label>
+      </div>
+     `;
+
+
+
+ }
 
 
